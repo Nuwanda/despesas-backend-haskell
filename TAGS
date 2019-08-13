@@ -1,0 +1,203 @@
+
+./app/DevelMain.hs,156
+module DevelMain DevelMain35,36
+update update50,51
+shutdown shutdown87,88
+tidStoreNum tidStoreNum98,99
+modifyStoredIORef modifyStoredIORef101,102
+
+./app/main.hs,962
+data Despesas Despesas31,32
+  Despesas Despesas32,33
+instance Yesod Yesod Despesas34,35
+  shouldLogIO shouldLogIO35,36
+  makeSessionBackend makeSessionBackend36,37
+instance YesodPersist YesodPersist Despesas38,39
+  type YesodPersistBackend YesodPersistBackend39,40
+  runDB runDB40,41
+DBUser DBUser48,49
+DBExpense DBExpense52,53
+DBUserExpense DBUserExpense57,58
+data User User64,65
+data User = UserUser64,65
+  { id id65,66
+  , name name66,67
+instance ToJSON ToJSON User69,70
+data Expense Expense71,72
+data Expense = ExpenseExpense71,72
+  { id id72,73
+  , amount amount73,74
+  , payed_by payed_by74,75
+instance ToJSON ToJSON Expense77,78
+intFromUserKey intFromUserKey89,90
+intFromExpenseKey intFromExpenseKey92,93
+getUserListR getUserListR96,97
+getUserR getUserR104,105
+getExpenseR getExpenseR111,112
+getExpenseListR getExpenseListR133,134
+openConnectionCount openConnectionCount154,155
+main main157,158
+
+./app/devel.hs,15
+main main4,5
+
+./test/Handler/CommentSpec.hs,67
+module Handler.CommentSpec Handler.CommentSpec2,3
+spec spec7,8
+
+./test/Handler/ProfileSpec.hs,67
+module Handler.ProfileSpec Handler.ProfileSpec2,3
+spec spec6,7
+
+./test/Handler/HomeSpec.hs,61
+module Handler.HomeSpec Handler.HomeSpec2,3
+spec spec6,7
+
+./test/Handler/CommonSpec.hs,65
+module Handler.CommonSpec Handler.CommonSpec0,1
+spec spec4,5
+
+./test/TestImport.hs,218
+module TestImportTestImport3,4
+runDB runDB27,28
+runHandler runHandler32,33
+withApp withApp37,38
+wipeDB wipeDB51,52
+getTables getTables74,75
+authenticateAs authenticateAs82,83
+createUser createUser91,92
+
+./test/Spec.hs,0
+
+./src/Handler/Common.hs,102
+module Handler.Common Handler.Common6,7
+getFaviconR getFaviconR14,15
+getRobotsR getRobotsR19,20
+
+./src/Handler/Home.hs,331
+module Handler.Home Handler.Home5,6
+data FileForm FileForm12,13
+data FileForm = FileFormFileForm12,13
+    { fileInfo fileInfo13,14
+    , fileDescription fileDescription14,15
+getHomeR getHomeR24,25
+postHomeR postHomeR37,38
+sampleForm sampleForm52,53
+commentIds commentIds68,69
+getAllComments getAllComments71,72
+
+./src/Handler/Comment.hs,75
+module Handler.Comment Handler.Comment0,1
+postCommentR postCommentR4,5
+
+./src/Handler/Profile.hs,74
+module Handler.Profile Handler.Profile5,6
+getProfileR getProfileR9,10
+
+./src/Settings.hs,1177
+module Settings Settings10,11
+import import14,15
+data AppSettings AppSettings28,29
+data AppSettings = AppSettingsAppSettings28,29
+    { appStaticDir appStaticDir29,30
+    , appDatabaseConf appDatabaseConf31,32
+    , appRoot appRoot33,34
+    , appHost appHost36,37
+    , appPort appPort38,39
+    , appIpFromHeader appIpFromHeader40,41
+    , appDetailedRequestLogging appDetailedRequestLogging44,45
+    , appShouldLogAll appShouldLogAll46,47
+    , appReloadTemplates appReloadTemplates48,49
+    , appMutableStatic appMutableStatic50,51
+    , appSkipCombining appSkipCombining52,53
+    , appCopyright appCopyright56,57
+    , appAnalytics appAnalytics58,59
+    , appAuthDummyLogin appAuthDummyLogin61,62
+instance FromJSON FromJSON AppSettings65,66
+    parseJSON parseJSON66,67
+widgetFileSettings widgetFileSettings101,102
+combineSettings combineSettings105,106
+widgetFile widgetFile111,112
+configSettingsYmlBS configSettingsYmlBS118,119
+configSettingsYmlValue configSettingsYmlValue122,123
+compileTimeAppSettings compileTimeAppSettings127,128
+combineStylesheets combineStylesheets139,140
+combineScripts combineScripts144,145
+
+./src/Settings/StaticFiles.hs,54
+module Settings.StaticFiles Settings.StaticFiles3,4
+
+./src/Model.hs,25
+module Model Model9,10
+
+./src/Application.hs,435
+module ApplicationApplication8,9
+makeFoundation makeFoundation56,57
+makeApplication makeApplication91,92
+makeLogWare makeLogWare98,99
+warpSettings warpSettings113,114
+getApplicationDev getApplicationDev128,129
+getAppSettings getAppSettings136,137
+develMain develMain140,141
+appMain appMain144,145
+getApplicationRepl getApplicationRepl167,168
+shutdownApp shutdownApp175,176
+handler handler184,185
+db db188,189
+
+./src/Import.hs,25
+module ImportImport0,1
+
+./src/Foundation.hs,1918
+module Foundation Foundation10,11
+data App App32,33
+data App = AppApp32,33
+    { appSettings appSettings33,34
+    , appStatic appStatic34,35
+    , appConnPool appConnPool35,36
+    , appHttpManager appHttpManager36,37
+    , appLogger appLogger37,38
+data MenuItem MenuItem40,41
+data MenuItem = MenuItemMenuItem40,41
+    { menuItemLabel menuItemLabel41,42
+    , menuItemRoute menuItemRoute42,43
+    , menuItemAccessCallback menuItemAccessCallback43,44
+data MenuTypesMenuTypes46,47
+    = NavbarLeft NavbarLeft47,48
+    | NavbarRight NavbarRight48,49
+type Form Form65,66
+type DB DB68,69
+instance Yesod Yesod App73,74
+    approot approot76,77
+    makeSessionBackend makeSessionBackend84,85
+    yesodMiddleware yesodMiddleware96,97
+    defaultLayout defaultLayout99,100
+    authRoute authRoute155,156
+    isAuthorized isAuthorized162,163
+    addStaticContent addStaticContent182,183
+    shouldLogIO shouldLogIO199,200
+    makeLogger makeLogger206,207
+instance YesodBreadcrumbs YesodBreadcrumbs App210,211
+    breadcrumb breadcrumb217,218
+instance YesodPersist YesodPersist App223,224
+    type YesodPersistBackend YesodPersistBackend224,225
+    runDB runDB225,226
+instance YesodPersistRunner YesodPersistRunner App230,231
+    getDBRunner getDBRunner231,232
+instance YesodAuth YesodAuth App234,235
+    type AuthId AuthId235,236
+    loginDest loginDest238,239
+    logoutDest logoutDest241,242
+    redirectToReferer redirectToReferer244,245
+    authenticate authenticate247,248
+    authPlugins authPlugins259,260
+isAuthenticated isAuthenticated265,266
+instance YesodAuthPersist YesodAuthPersist App272,273
+instance RenderMessage RenderMessage App FormMessage276,277
+    renderMessage renderMessage277,278
+instance HasHttpManager HasHttpManager App283,284
+    getHttpManager getHttpManager284,285
+unsafeHandler unsafeHandler287,288
+
+./src/Import/NoFoundation.hs,51
+module Import.NoFoundationImport.NoFoundation1,2
